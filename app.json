@@ -1,36 +1,57 @@
 {
   "expo": {
-    "name": "storytime_gpt",
-    "slug": "storytime_gpt",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
-    "scheme": "myapp",
+    "scheme": "acme",
     "userInterfaceStyle": "automatic",
+    "orientation": "default",
+    "icon": "./src/assets/icon.png",
     "splash": {
-      "image": "./assets/images/splash.png",
+      "image": "./src/assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "ios": {
-      "supportsTablet": true
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
-    },
     "web": {
-      "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "bundler": "metro"
     },
     "plugins": [
-      "expo-router"
+      [
+        "expo-router",
+        {
+          "origin": "https://n"
+        }
+      ],
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./src/assets/fonts/DMSans-Black.ttf",
+            "./src/assets/fonts/DMSans-Bold.ttf",
+            "./src/assets/fonts/DMSans-ExtraBold.ttf",
+            "./src/assets/fonts/DMSans-ExtraLight.ttf",
+            "./src/assets/fonts/DMSans-Light.ttf",
+            "./src/assets/fonts/DMSans-Medium.ttf",
+            "./src/assets/fonts/DMSans-Regular.ttf",
+            "./src/assets/fonts/DMSans-SemiBold.ttf",
+            "./src/assets/fonts/DMSans-Thin.ttf"
+          ]
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "usesCleartextTraffic": true
+          }
+        }
+      ]
     ],
-    "experiments": {
-      "typedRoutes": true
+    "name": "StorytimeLLM",
+    "slug": "storytime_gpt",
+    "android": {
+      "package": "com.adityatrips.storytime_gpt"
+    },
+    "ios": {
+      "bundleIdentifier": "com.adityatripathi.storytimegpt"
     }
   }
 }
