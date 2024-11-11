@@ -1,0 +1,22 @@
+# fly.toml app configuration file generated for server-billowing-cloud-3588 on 2024-11-11T23:41:44+05:30
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'server-billowing-cloud-3588'
+primary_region = 'ams'
+
+[build]
+
+[http_service]
+  internal_port = 8000
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
+
+[[vm]]
+  memory = '1gb'
+  cpu_kind = 'shared'
+  cpus = 1
